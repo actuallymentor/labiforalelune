@@ -13,6 +13,9 @@ body {
 	flex-direction: column;
 	// Backgorund color
 	background: $background-color;
+	* {
+		max-width: 100%;
+	}
 }
 
 #hero {

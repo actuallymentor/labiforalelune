@@ -11,7 +11,7 @@ module.exports = {
 	system: {
 		public: process.env.NODE_ENV == 'production' ? __dirname + '/../docs/' : __dirname + '/../public/',
 		source: __dirname + '/../src/',
-		url: process.env.NODE_ENV == 'production' ? 'https://www.labiforalelune.com/' : 'http://' + ip.address() + ':3000/',
+		url: process.env.NODE_ENV == 'production' ? 'https://labiforalelune.com/' : 'http://' + ip.address() + ':3000/',
 		gverification: undefined,
 		timestamp: new Date().getTime(),
 		year: new Date().getFullYear()

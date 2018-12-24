@@ -1,0 +1,50 @@
+- const page = { title: 'Home', desc: 'Home page', published: '2017-01-01', url: '/', featuredimg: '/image.jpg' }
+doctype html
+html( lang="en" )
+	include pug/_header.pug
+	body
+		div#hero
+			div#titles
+				h1 La Bifora Le Luna Bed and Breakfast
+				h2 Come to the beautiful Santo Steffano Di Sessanio to relax and enjoy life
+				div#languages
+					a( href='/' ) English
+					a( href='/nederlands.html' ) Nederlands
+					a( href='/italiano.html' ) Italiano
+
+
+		main.container
+			div#usps.row
+				div.col.l3.m6.s12
+					img( src='/assets/block1.jpg' ).col.s12 	
+					h3.col.s12 Beautiful Scenery
+					p.col.s12 Located in the heart of St. Stefano di Sessanio, in a 15th century palace, 'La Bifora Le Lune' offers a panoramic view of the surroundings. St. Stefano di Sessanio is ideally positioned to visit the Abruzzo region. This region is situated with the Marche to the North, the Lazio to the West, Molise to the South and the Baltic Adriatic to the East. Sight seeing opportunities such as the 'del Gran Sasso Monti della Laga' national park, L'Aquila and Campo Imperatore are only a few kilometers away.
+				div.col.l3.m6.s12
+					img( src='/assets/block2.jpg' ).col.s12 	
+					h3.col.s12 Italian Hospitality
+					p.col.s12 The Bed and Breakfast is a family run villa, offering a multitude of rooms. Breakfast is prepared in itatian style by the owner, and served in a bright and stylish salon. Since the villa was in the distant past owned by the ancient Florentine 'Piccolomini' family the crest is still evident above the fireplace. Guests are served with local specialties such as homemade italian bread, salami, cheeze and sweet homemade pastries. All are naturally accompanied by Itallian coffee, tea, fruits and juices.
+				div.col.l3.m6.s12
+					img( src='/assets/block3.jpg' ).col.s12 	
+					h3.col.s12 Quality Rooms
+					p.col.s12 The guest rooma are spacious, quiet and furnished in a stylish fashion. Each room is equipped with heating and the acommodation of children and/or pets is possible. The bathrooms are large and well lit.
+				div.col.l3.m6.s12
+					img( src='/assets/block4.jpg' ).col.s12 	
+					h3.col.s12 Amazing Food
+					p.col.s12 The food prepared for you in the bed & breakfast is home made and often organically grown. Ingredients are fresh and local. Your hostess takes pleasure in preparing all sorts of meals, pastries and other delicious foods.
+
+		div#location
+
+			h2 Location & Directions
+			iframe(  width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=La%20bifora%20e%20le%20lune%20via%20della%20Chiesa%20snc&key=AIzaSyAPXqhhkZjQhsoaGBByGiLfuxa03rEP5gg" allowfullscreen )
+			div.row
+				div.col.m8.offset-m2.s12
+					include:markdown-it directions.md
+
+		div#about
+			h2 The BnB and the Area
+			div.row
+				div.col.m8.offset-m2.s12
+					include:markdown-it about.md
+					img#card( src='/assets/card.png' )
+		
+		include pug/_footer.pug

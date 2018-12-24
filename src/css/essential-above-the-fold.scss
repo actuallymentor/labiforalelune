@@ -1,0 +1,64 @@
+$background-color: white;
+
+body {
+	// Override browser default padding and margin
+	margin: 0;
+	padding: 0;
+	// Set font globally
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	// Sticky the footer
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	// Backgorund color
+	background: $background-color;
+}
+
+#hero {
+	background: url(/assets/hero.jpg);
+    background-size: cover;
+    min-height: 500px;
+    color: white;
+
+	// Vertically align content
+	display: flex;
+	align-items: center;
+  	justify-content: center;
+  	flex-direction: column;
+
+  	h1, h2 {
+  		background: rgba(0,0,0,0.4);
+    	padding: 1rem;
+    	margin: 1rem;
+    	text-align: center;
+  	}
+  	#languages {
+  		margin-top: 2rem;
+  		text-align: center;
+  		a {
+  			padding: 1rem;
+		    color: white;
+		    background: rgba(0,0,0,0.2);
+  		}
+  	}
+
+}
+
+main {
+	// make footer sticky
+	flex: 1 0 auto;
+	// Vertically align content
+	// display: flex;
+	// align-items: center;
+ //  	justify-content: center;
+ //  	flex-direction: column;
+}
+
+#footer {
+	// make the copyright notics less in your face
+	text-align: center;
+	padding: 10px;
+	opacity: 0.6;
+	font-size: 13px;
+}

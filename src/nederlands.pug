@@ -1,0 +1,52 @@
+- const page = { title: 'Home', desc: 'Home page', published: '2017-01-01', url: '/', featuredimg: '/image.jpg' }
+doctype html
+html( lang="en" )
+	include pug/_header.pug
+	body
+		div#hero
+			div#titles
+				h1 La Bifora Le Luna Bed en Breakfast
+				h2 Kom naar het prachtige Santa Stefano Di Sessanio om te ontspannen en van het leven te genieten
+				div#languages
+					a( href='/' ) English
+					a( href='/nederlands.html' ) Nederlands
+					a( href='/italiano.html' ) Italiano
+
+
+		main.container
+			div#usps.row
+				div.col.l3.m6.s12
+					img( src='/assets/block1.jpg' ).col.s12 	
+					h3.col.s12 Prachtige omgeving
+					p.col.s12 'La Bifora Le Lune' bevindt zich in het hart van St. Stefano di Sessanio. Haar ligging zorgt voor een prachtig panoramisch uitzicht over de omgeving. St. Stefano di Sessanio ligt op een ideale plaats voor mensen die de Abruzzo regio willen bezoeken. Deze regio ligt ten zuiden van de Marche regio, ten oosten van de Lazio regio, ten noorden van de Molise regio en ten westen van de Baltisch Adriatische regio. Bezienswaardigheden zoals het 'del Gran Sasso Monti della Laga' nationale park, L'Aquila and Campo Imperatore zijn slechts een autorit van deze locatie verwijderd.
+
+				div.col.l3.m6.s12
+					img( src='/assets/block2.jpg' ).col.s12 	
+					h3.col.s12 Italiaanse Gastvrijheid
+					p.col.s12 De Bed and Breakfast is onder beheer van een lokale familie met een assortiment aan kamers beschikbaar. Ontbijt wordt bereid in Italiaanse stijl door de eigenaresse en geserveerd in een stijlvolle salon. Het feit dat de oude Florentijnse 'Piccolomini' familie in het verleden de eigenaar was van deze locatie is nog steeds te zien aan het familiewapen boven de haard. Gasten worden voorzien van lokale specialiteiten zoals thuisgemaakt italiaans brood, salami, kazen en zoete thuisgemaakte gabakjes. Dit word allemaal uiteraard geserveerd met Italiaanse koffie en desgewenst thee, sap en fruit.
+				div.col.l3.m6.s12
+					img( src='/assets/block3.jpg' ).col.s12 	
+					h3.col.s12 Kwaliteitskamers
+					p.col.s12 De gastkamers zijn ruim, stil en bekleed op een stijlvolle manier. Elke kamer heeft verwarming en de accomodatie van kinderen en/of huisdieren is mogelijk. De badkamers zijn ruim en goed belicht.
+
+				div.col.l3.m6.s12
+					img( src='/assets/block4.jpg' ).col.s12 	
+					h3.col.s12 Geweldig Eten
+					p.col.s12 Het eten dat wordt geserveerd in de bed & breakfast wordt thuis bereid en de ingredienten worden vaak biologisch verbouwd. Ingredienten zijn vers en lokaal waar mogelijk. De gastvrouw heeft een passie voor het komen en bakken van maaltijden en zoete lekkernijen.
+
+		div#location
+
+			h2 Lokatie en Route
+			iframe(  width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=La%20bifora%20e%20le%20lune%20via%20della%20Chiesa%20snc&key=AIzaSyAPXqhhkZjQhsoaGBByGiLfuxa03rEP5gg" allowfullscreen )
+			div.row
+				div.col.m8.offset-m2.s12
+					include:markdown-it routebeschrijving.md
+
+		div#about
+			h2 De BnB en de omgeving
+			div.row
+				div.col.m8.offset-m2.s12
+					include:markdown-it over.md
+					img#card( src='/assets/card.png' )
+		
+		include pug/_footer.pug

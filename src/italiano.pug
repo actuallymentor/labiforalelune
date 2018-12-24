@@ -1,0 +1,50 @@
+- const page = { title: 'Home', desc: 'Home page', published: '2017-01-01', url: '/', featuredimg: '/image.jpg' }
+doctype html
+html( lang="en" )
+	include pug/_header.pug
+	body
+		div#hero
+			div#titles
+				h1 La Bifora Le Luna Bed and Breakfast
+				h2 Come to the beautiful Santo Steffano Di Sessanio to relax and enjoy life
+				div#languages
+					a( href='/' ) English
+					a( href='/nederlands.html' ) Nederlands
+					a( href='/italiano.html' ) Italiano
+
+		main.container
+			div#usps.row
+				div.col.l3.m6.s12
+					img( src='/assets/block1.jpg' ).col.s12 	
+					h3.col.s12 Scenario Belissimo
+					p.col.s12 Nel cuore di S. Stefano di Sessanio, in un palazzo del XV secolo, caratterizzato da bifore dalla vista panoramica. L'Abruzzo è una regione del centro Italia, collocata tra le Marche a nord, il Lazio ad ovest, il Molise a sud ed il mar Adriatico ad est.La maggior parte del territorio è occupato da alte montagne. S. Stefano di Sessanio si trova in una posizione ideale per chi vuole visitare l'Abruzzo. Posto a pochi km da L'Aquila e Campo Imperatore, nel cuore del Parco Nazionale del Gran Sasso e Monti della Laga.
+				div.col.l3.m6.s12
+					img( src='/assets/block2.jpg' ).col.s12 	
+					h3.col.s12 L’OSPITALITÀ ITALIANA
+					p.col.s12 Il B&B La bifora e le lune è una struttura a conduzione familiare, che offre stanze da letto con bagni ed ingressi indipendenti. La colazione è varia e scrupolosamente curata dalla padrona di casa. Servita in un ambiente luminoso e raffinato, appartenuto alla famiglia dei Piccolomini, antico casato fiorentino, presenza ancora testimoniata dallo stemma di famiglia posto al centro del grande camino. Vengono servite agli ospiti le specialità locali: pane casereccio, salumi e formaggi e per i più golosi la pasticceria casereccia, il tutto accompagnato da caffè, latte, tè, frutta e succhi.
+
+				div.col.l3.m6.s12
+					img( src='/assets/block3.jpg' ).col.s12 	
+					h3.col.s12 QUALITÀ CAMERE
+					p.col.s12 A disposizione degli ospiti camere ampie e silenziose graziosamente arredate ed una cucina attrezzata ad uso comune. Ogni camera è dotata di riscaldamento, c'è la possibilità di ospitare bambini ed animali domestici. Bagni grandi e luminosi.
+				div.col.l3.m6.s12
+					img( src='/assets/block4.jpg' ).col.s12 	
+					h3.col.s12 CIBO INCREDIBILE
+					p.col.s12 Il cibo preparato per voi in bed & breakfast è fatto in casa e spesso da agricoltura biologica. Gli ingredienti sono freschi e locali. La padrona di casa ha il piacere di preparare tutti i tipi di piatti, dolci e altri cibi deliziosi.
+
+
+		div#location
+
+			h2 Dove Siamo
+			iframe(  width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=La%20bifora%20e%20le%20lune%20via%20della%20Chiesa%20snc&key=AIzaSyAPXqhhkZjQhsoaGBByGiLfuxa03rEP5gg" allowfullscreen )
+			div.row
+				div.col.m8.offset-m2.s12
+					include:markdown-it routeit.md
+
+		div#about
+			div.row
+				div.col.m8.offset-m2.s12
+					include:markdown-it overit.md
+					img#card( src='/assets/card.png' )
+		
+		include pug/_footer.pug
